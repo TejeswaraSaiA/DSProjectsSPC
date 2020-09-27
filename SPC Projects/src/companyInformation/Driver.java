@@ -14,7 +14,6 @@ public class Driver
 		int n = scan.nextInt();
 		Employee[] empObjects = new Employee[n];
 		Department[] deptObjects = new Department[n];
-		empObjects.
 		
 		for(int i=0;i<n;i++)
 		{
