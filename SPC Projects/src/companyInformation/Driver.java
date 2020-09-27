@@ -1,5 +1,7 @@
 package companyInformation;
 import java.util.*;
+import companyInformation.Department;
+import companyInformation.Employee;
 public class Driver 
 {
 	public int[] eid = new int[5]; 
@@ -12,8 +14,8 @@ public class Driver
 		System.out.println("Enter the Number of Entries");
 		Scanner scan = new Scanner(System.in);
 		int n = scan.nextInt();
-		Employee[] empObjects = new Employee[n];
-		Department[] deptObjects = new Department[n];
+		
+		
 		
 		for(int i=0;i<n;i++)
 		{
