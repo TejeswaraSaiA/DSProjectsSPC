@@ -1,4 +1,5 @@
 package companyInformation;
+import companyInformation.Employee;
 
 public class Department 
 {

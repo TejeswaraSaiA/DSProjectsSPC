@@ -1,4 +1,5 @@
 package companyInformation;
+import companyInformation.Department;
 public class Employee 
 {
 	private String emp_id;
@@ -80,6 +81,28 @@ public class Employee
 		return "False";
 	}
 	
+	//Used to CalculateDA and Total Salary
+	public void calculateDA(float salary,int dept_id)
+	{
+		this.DA = (salary*(dept_id/1000));
+		this.totalSalary = salary + this.DA;
+		
+	}
+	
+	//Generating Department Name using Department Class Object
+	public void deptName(int dept_id)
+	{
+		Department d = new Department();
+		boolean a = d.generateDeptName(dept_id);
+		if(a == true)
+		{
+			System.out.println("Department Name Was Assigned\n");
+		}
+		else
+		{
+			System.out.println("Department Name was Not Assigned\n");
+		}
+	}
 	
 	public boolean checkEmployee(String emp_name, String job, float salary, int dept_id,int[] eid) 
 	{
@@ -112,24 +135,16 @@ public class Employee
 			this.salary = salary;
 			this.dept_id = dept_id;
 			this.emp_id = s;
+			calculateDA(salary,dept_id);
+			deptName(dept_id);
+			
+			System.out.println("All Fields are Updated Successfully\n");
+			return true;
 			
 		}
 		else
 		{
 			return false;
 		}
-		
-		
-		if(emp_id.compareTo("False") == 0)
-		{
-			return false;
-		}
-		return true;
 	}
-	public void calculateDA()
-	{
-		
-	}
-	
-
 }
